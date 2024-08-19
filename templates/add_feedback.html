@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Add Feedback
+{% endblock %}
+
+{% block content %}
+<form method="POST" class="mx-auto mt-5" style="max-width: 500px;">
+    {{ form.hidden_tag() }}
+    <h1 class="text-center">Add Feedback</h1>
+
+    <div class="form-group mb-3">
+        {{ form.title.label(class="form-label") }}
+        {{ form.title(class="form-control", placeholder="Title") }}
+    </div>
+
+    <div class="form-group mb-3">
+        {{ form.content.label(class="form-label") }}
+        {{ form.content(class="form-control", placeholder="Your Feedback") }}
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+</form>
+{% endblock %}
